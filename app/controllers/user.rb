@@ -1,5 +1,10 @@
 enable :sessions
 
+before '/user/:id' do
+  @user = User.find_by(id: params[:id])
+  session[:user_id] == @user.id ? @valid = true : @valid = false
+end
+
 get '/session' do
   erb :'users/login'
 end

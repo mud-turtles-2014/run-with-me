@@ -1,9 +1,11 @@
 $(document).ready(function() {
-  $('#create-run').hide();
+  $('.create-run').hide();
 
-  $('#btn-upload').click(function(event) {
+  $('.btn-upload').click(function(event) {
     event.preventDefault();
-    $('#create-run').toggle();
+    // $('ul.create-run li:nth-child(n)').children().toggle();
+    $(this.parentNode).toggleClass('open');
+    $(this).siblings('.create-run').toggle();
   });
 
 

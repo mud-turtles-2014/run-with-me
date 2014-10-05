@@ -1,12 +1,16 @@
 $(document).ready(function() {
-  $('.create-run').hide();
+  $('.open-create-run').hide();
 
   $('.btn-upload').click(function(event) {
     event.preventDefault();
-    // $('ul.create-run li:nth-child(n)').children().toggle();
-    $(this.parentNode).toggleClass('open');
-    $(this).siblings('.create-run').toggle();
+
+    // $(this.parentNode).toggleClass('open');
+    // is line 7 necessary?
+    $(this).siblings('.open-create-run').toggle();
   });
 
+  $.ajax {
+
+  }
 
 });

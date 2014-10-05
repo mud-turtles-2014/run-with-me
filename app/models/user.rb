@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_secure_password
-  has_many :requests
-  has_many :runs, through: :requests
+  has_many :plans
+  has_many :runs, through: :plans
   has_many :relationships, foreign_key: "inviter_id"
   has_many :relationships, foreign_key: "invited_id"
 

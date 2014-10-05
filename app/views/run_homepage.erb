@@ -3,8 +3,8 @@
   <ul>
     <li>Francisco</li>
     <li>Rafael</li>
-    <% @user.relationships.each_with_index do |index, friend| %>
-      <li><%= friend.invited_id %></li>
+    <% @user.relationships.each_with_index do |friend, index| %>
+      <li><%= friend[index] %></li>
     <% end %>
   </ul>
 </div>

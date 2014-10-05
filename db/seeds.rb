@@ -42,7 +42,15 @@
                password: "admin1"
                )
 
+    User.create(  name: "admin2",
+               username: "admin2",
+               email: Faker::Internet.email,
+               password: "admin3"
+               )
+
  Relationship.create(invited_id: User.find(1).id, inviter_id: User.find(2).id, pending: false, confirmed: true)
+
+ Relationship.create(invited_id: User.find(1).id, inviter_id: User.find(3).id, pending: false, confirmed: true)
 
  User.find(1).runs.create(time: DateTime.new(2001, 2, 3),
                   location: "Central Park")

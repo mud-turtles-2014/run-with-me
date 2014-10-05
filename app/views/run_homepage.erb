@@ -14,6 +14,13 @@
     <ul>
       <li>12 pm on 9/24/14 at Central Park</li>
     </ul>
+    <button id="btn-upload" type="submit" value="Let's get running!">Let's get running!</button>
+      <br><form action="/user/<%=@user.id%>/run/create" method="POST" id="create-run">
+        <input type="text" name="run[time]" placeholder="Time"><br>
+        <input type="text" name="run[location]" placeholder="Location"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    <!-- </button> -->
 </div>
 
 <div id="past_runs">

@@ -10,14 +10,16 @@ $(document).ready(function() {
   });
 
   $('.create-run').submit(function(event){
-
+      event.preventDefault();
       $.ajax ({
       type: "POST",
       url: "/user/:id/run/create",
       data: $(this).serialize(),
-      dataType: "JSON"
+      dataType: "html"
     }).done(function(response) {
         console.log(response)
+        $('#upcoming-runs ul').append(response)
+
     });
 
   });

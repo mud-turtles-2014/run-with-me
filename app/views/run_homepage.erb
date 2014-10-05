@@ -18,14 +18,19 @@
   </ul>
 </div>
 
-<div id="upcoming_runs">
+<div id="upcoming-runs">
   <p>Upcoming Runs</p>
     <ul>
       <li>12 pm on 9/24/14 at Central Park</li>
+        <% @runs.each do |run| %>
+        <li>
+          <%= run.time.to_s[0..10] %> at <%= run.location %>
+        </li>
+        <% end %>
     </ul>
 </div>
 
-<div id="past_runs">
+<div id="past-runs">
   <p>Past Runs</p>
     <ul>
       <li>6 pm on 9/23/14 at Battery Park</li>

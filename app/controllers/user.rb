@@ -40,10 +40,10 @@ post '/user' do
   end
 end
 
-delete '/session' do
-  session.clear
-  erb :index
-end
+# delete '/session' do
+#   session.clear
+#   erb :index
+# end
 
 get '/logout' do
   session.clear

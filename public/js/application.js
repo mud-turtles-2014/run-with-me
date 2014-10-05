@@ -1,7 +1,12 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  $('.create-run').hide();
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $('.btn-upload').click(function(event) {
+    event.preventDefault();
+    // $('ul.create-run li:nth-child(n)').children().toggle();
+    $(this.parentNode).toggleClass('open');
+    $(this).siblings('.create-run').toggle();
+  });
+
+
 });

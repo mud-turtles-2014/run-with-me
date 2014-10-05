@@ -4,7 +4,16 @@
     <li>Francisco</li>
     <li>Rafael</li>
     <% @user.relationships.each_with_index do |relationship| %>
-    <li><%=User.find(relationship.inviter_id).name%></li>
+    <li><%=User.find(relationship.inviter_id).name.capitalize%>
+      <button class="btn-upload" type="submit" value="Let's get running!">Invite On a Run</button>
+      <div class="create-run">
+        <form action="/user/<%=@user.id%>/run/create" method="POST">
+          <input type="text" name="run[time]" placeholder="Time"><br>
+          <input type="text" name="run[location]" placeholder="Location"><br><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </li>
     <% end %>
   </ul>
 </div>

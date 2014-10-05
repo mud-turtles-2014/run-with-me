@@ -8,8 +8,8 @@
       <button class="btn-upload" type="submit" value="Let's get running!">Invite On a Run</button>
       <div class="open-create-run">
         <form action="/user/<%=@user.id%>/run/create" method="POST" class="create-run">
-          <input type="text" name="run[time]" value=<%=Chronic.parse('tomorrow')%> class="time-text"><br>
-          <input type="text" name="run[location]" placeholder="Location" class="location-text"><br><br>
+          <input type="text" name="time" value=<%=Chronic.parse('tomorrow')%> class="time-text"><br> <!-- can be simply "time" as opposed to run[time]. same for "location" -->
+          <input type="text" name="location" placeholder="Location" class="location-text"><br><br>
           <input type="submit" value="Submit" class="submit-run">
         </form>
       </div>

@@ -9,8 +9,13 @@ $(document).ready(function() {
     $(this).siblings('.open-create-run').toggle();
   });
 
-  $.ajax {
-
-  }
+  // $.ajax ({
+  //   type: "POST",
+  //   url: "/user/:id/run/create",
+  //   data: {time: time_text, location: location_text},
+  //   dataType: "JSON"
+  // });.done(function(response) {
+  //     console.log(response)
+  // });
 
 });

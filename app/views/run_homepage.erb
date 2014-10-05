@@ -1,1 +1,24 @@
-run_homepage.erb
+<div id="friends_list">
+  <p>Friend's List</p>
+  <ul>
+    <li>Francisco</li>
+    <li>Rafael</li>
+    <% @user.relationships.each_with_index do |index, friend| %>
+      <li><%= friend.invited_id %></li>
+    <% end %>
+  </ul>
+</div>
+
+<div id="upcoming_runs">
+  <p>Upcoming Runs</p>
+    <ul>
+      <li>12 pm on 9/24/14 at Central Park</li>
+    </ul>
+</div>
+
+<div id="past_runs">
+  <p>Past Runs</p>
+    <ul>
+      <li>6 pm on 9/23/14 at Battery Park</li>
+    </ul>
+</div>

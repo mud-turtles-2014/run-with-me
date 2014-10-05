@@ -25,7 +25,7 @@ get '/user' do
   erb :'users/create_user'
 end
 
-get '/user/:user_id' do
+get '/user/:id' do
   @runs = Run.all
   erb :'run_homepage'
 end

@@ -1,4 +1,4 @@
 class Run < ActiveRecord::Base
-  has_many :requests
-  has_many :users, through: :requests
+  has_many :plans
+  has_many :users, through: :plans
 end

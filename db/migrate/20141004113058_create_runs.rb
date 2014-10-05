@@ -3,7 +3,7 @@ class CreateRuns < ActiveRecord::Migration
     create_table :runs do |t|
       t.datetime :time
       t.string :location
-      t.belongs_to :planned_run
+      t.belongs_to :plan
 
       t.timestamps
     end

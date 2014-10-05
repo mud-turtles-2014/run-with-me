@@ -9,13 +9,18 @@ $(document).ready(function() {
     $(this).siblings('.open-create-run').toggle();
   });
 
-  // $.ajax ({
-  //   type: "POST",
-  //   url: "/user/:id/run/create",
-  //   data: {time: time_text, location: location_text},
-  //   dataType: "JSON"
-  // });.done(function(response) {
-  //     console.log(response)
-  // });
+  $('.create-run').submit(function(event){
+
+      $.ajax ({
+      type: "POST",
+      url: "/user/:id/run/create",
+      data: $(this).serialize(),
+      dataType: "JSON"
+    }).done(function(response) {
+        console.log(response)
+    });
+
+  });
+
 
 });
